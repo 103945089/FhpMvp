@@ -30,10 +30,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    /*OkRx网络请求框架*/
+    implementation 'com.lzy.net:okrx:1.0.2'
+    /*Gson*/
+    implementation 'com.google.code.gson:gson:2.2.4'
 }
 repositories {
     mavenCentral()
@@ -41,8 +42,8 @@ repositories {
 publish {
     userOrg = 'fanhaipeng1226' //bintray账户下某个组织id
     groupId = 'com.fhp' //maven仓库下库的包名，一般为模块包名
-    artifactId = 'fhpMvp' //项目名称
-    publishVersion = '1.0.0' //版本号
+    artifactId = 'basemvp' //项目名称
+    publishVersion = '1.0.1' //版本号
     desc = 'lol' //项目介绍，可以不写
-    website = '' //项目主页，可以不写
+    website = 'https://github.com/103945089/FhpMvp' //项目主页，可以不写
 }

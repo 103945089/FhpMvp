@@ -1,7 +1,10 @@
-package com.example.mymvp
+package com.example.mymvp.mvp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.mymvp.okrx.BaseBean
+import com.example.mymvp.okrx.OkUtils
+import com.lzy.okgo.model.HttpParams
 
 /**
  * Created by Never Fear   on 2018\8\10 0010.
@@ -13,7 +16,6 @@ abstract class BaseMvpAty<V: BaseView,P: Presenter<*, V>> : AppCompatActivity(),
         super.onCreate(savedInstanceState)
 
         presenter=createPresenter()
-
         presenter?.let {
             it.createModule()
             it.bindView(bindView())
