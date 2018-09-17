@@ -18,6 +18,7 @@ import java.lang.reflect.Type
  *
  *此Converter只允许泛型入参
  *除RIGHT_CODE外的所有CODE都上抛自定义异常到OnError中将Throwable强转为MyException进行处理
+ * 如果要更改RIGHT_CODE请在application中自行修改
  */
 open class JsonConvert<T>: Converter<T> {
     private var type: Type?=null

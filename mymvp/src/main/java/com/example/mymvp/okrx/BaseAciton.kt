@@ -3,7 +3,7 @@ package com.example.mymvp.okrx
 import com.example.mymvp.log
 import com.google.gson.Gson
 import com.lzy.okgo.model.Response
-import rx.Observer
+import io.reactivex.Observer
 
 /**
  * Created by Never Fear   on 2018\9\4 0004.
@@ -27,8 +27,8 @@ interface BaseAciton<T> : Observer<T> {
 
     fun httpFailed(e:Throwable?)
 
-    override fun onError(e: Throwable?) {
-        e?.printStackTrace()
+    override fun onError(e: Throwable) {
+        e.printStackTrace()
         log("okgo","网络请求报错了 看栈${e?.toString()}")
         httpFailed(e)
     }

@@ -3,9 +3,9 @@ package com.example.mymvp.okrx
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.model.HttpParams
 import com.lzy.okgo.model.Response
-import com.lzy.okrx.adapter.ObservableResponse
-import rx.Observable
-import rx.schedulers.Schedulers
+import com.lzy.okrx2.adapter.ObservableResponse
+import io.reactivex.Observable
+import io.reactivex.schedulers.Schedulers
 
 /**
  * Created by Never Fear   on 2018\9\4 0004.
