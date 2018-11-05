@@ -11,13 +11,13 @@ import io.reactivex.schedulers.Schedulers
  * Created by Never Fear   on 2018\9\4 0004.
 Never More....
  */
-object OkUtils {
+object OkKtUtils {
     var POST=2
     var GET=1
     /**
      * httpType-1-get 2-post
      */
-    fun <T>createObservable(httpParams: HttpParams,url:String,httpType:Int): Observable<Response<T>>? {
+    fun <T>createObservable(httpParams: HttpParams?,url:String,httpType:Int): Observable<Response<T>>? {
         if (httpType==1){
             return  OkGo.get<T>(url)
                     .params(httpParams)

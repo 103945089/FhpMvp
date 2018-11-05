@@ -2,9 +2,6 @@ package com.example.mymvp.mvp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.mymvp.okrx.BaseBean
-import com.example.mymvp.okrx.OkUtils
-import com.lzy.okgo.model.HttpParams
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 

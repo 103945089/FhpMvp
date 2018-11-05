@@ -44,7 +44,7 @@ publish {
     userOrg = 'fanhaipeng1226' //bintray账户下某个组织id
     groupId = 'com.fhp' //maven仓库下库的包名，一般为模块包名
     artifactId = 'basemvp' //项目名称
-    publishVersion = '1.0.1' //版本号
+    publishVersion = '1.0.6' //版本号
     desc = 'lol' //项目介绍，可以不写
     website = 'https://github.com/103945089/FhpMvp' //项目主页，可以不写
 }
