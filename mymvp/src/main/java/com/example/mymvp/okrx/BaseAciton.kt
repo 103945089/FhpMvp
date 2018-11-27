@@ -12,14 +12,23 @@ Never More....
 interface BaseAciton<T> : Observer<T> {
 
     override fun onNext(t: T) {
-        if (t is Response<*>){
-            if (!t.isSuccessful)return
-            if (t.isFromCache){
-                acheSuccess(t)
-            }else{
-                httpSuccess(t)
+        try {
+            if (t is Response<*>){
+                if (!t.isSuccessful){
+                    onError(t.exception)
+                    return
+                }
+                if (t.isFromCache){
+                    acheSuccess(t)
+                }else{
+                    httpSuccess(t)
+                }
             }
+        }catch (e:Exception){
+            log("okgo","处理出错${e.toString()}")
+            e?.printStackTrace()
         }
+
     }
     fun httpSuccess(t:T)
 

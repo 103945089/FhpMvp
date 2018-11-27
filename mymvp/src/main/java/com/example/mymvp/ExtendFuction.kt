@@ -8,5 +8,5 @@ import android.util.Log
 Never More....
  */
 fun Any.log(tag:String,string: String){
-    Log.e("fhp",string)
+    Log.e(tag,string)
 }

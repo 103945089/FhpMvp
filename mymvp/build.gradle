@@ -3,9 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
 
 
+    lintOptions {
+        abortOnError false
+    }
 
     defaultConfig {
         minSdkVersion 15
@@ -33,7 +36,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     /*OkRx网络请求框架*/
     implementation 'com.lzy.net:okrx2:2.0.2'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.1'
     /*Gson*/
     implementation 'com.google.code.gson:gson:2.2.4'
 }
@@ -44,7 +46,7 @@ publish {
     userOrg = 'fanhaipeng1226' //bintray账户下某个组织id
     groupId = 'com.fhp' //maven仓库下库的包名，一般为模块包名
     artifactId = 'basemvp' //项目名称
-    publishVersion = '1.0.6' //版本号
+    publishVersion = '1.0.9' //版本号
     desc = 'lol' //项目介绍，可以不写
     website = 'https://github.com/103945089/FhpMvp' //项目主页，可以不写
 }
